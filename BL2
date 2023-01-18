@@ -1,0 +1,17 @@
+a = int(input())
+b = int(input())
+
+def gcd(a,b):
+  hamuocchung = []
+  maxx = 0
+  if a > b:
+    maxx = a
+  else:
+    maxx = b
+  for i in range(1, maxx+1):
+    if a % i == 0 and b % i == 0:
+      hamuocchung.append(i)
+  hamuocchung.sort(reverse=True)
+  return hamuocchung[0]
+
+print(gcd(a,b))
