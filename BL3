@@ -1,0 +1,13 @@
+def format(s):
+  chuoimoi = '0'
+  if len(s) > 3:
+    if s[len(s)-3:len(s)] != 'ing':
+      chuoimoi = s[0:len(s)] + 'ing'
+    if s[len(s)-3:len(s)] == 'ing':
+      chuoimoi = s[0:len(s)] + 'ly'
+  else:
+    chuoimoi = s
+  return chuoimoi
+
+s = str(input())
+print(format(s))
