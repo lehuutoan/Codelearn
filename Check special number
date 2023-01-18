@@ -1,0 +1,14 @@
+def check_special_number(n):
+  n = str(n)
+  tansuat = 0
+  hamtansuat = []
+  for i in n:
+    tansuat = n.count(i)
+    hamtansuat.append(tansuat)
+  hamtansuat.sort()
+  hamtansuat.reverse()
+  if hamtansuat[0] > 1:
+      hamtansuat = []
+  else:
+      hamtansuat = [1]
+  return bool(hamtansuat)
